@@ -23,9 +23,9 @@
 </head>
 <header>
   <h2>Zach's Album Reviews</h2>
-  <a href="index.html" style="padding-right: 25px;">Home</a>
-  <a href="about.html" style="padding-right: 25px;">About</a>
-  <a href="contact.html">Contact</a>
+  <a href="/index" style="padding-right: 25px;">Home</a>
+  <a href="/about" style="padding-right: 25px;">About</a>
+  <a href="/contact">Contact</a>
 </header>
 <body>
   <h3>Contact</h3>
@@ -51,13 +51,13 @@
     }
   </script> 
   <!-- This is a basic form that takes in input from the user. -->
-  <form name="form" onsubmit="return valid()">
+  <form name="form" onsubmit="return valid()" action="/submit-form" method="post">
     <fieldset>
       <legend>Inquiries</legend>
       <label for="email">Email:</label><br>
-      <input type="text" id="email"><br>
+      <input type="text" id="email" name="email" required><br>
       <label for="comment">Comment:</label><br>
-      <input type="text" id="comment">
+      <input type="text" id="comment" name="comment">
       <input type="submit" value="Submit">
     </fieldset>
   </form> 
