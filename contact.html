@@ -32,32 +32,14 @@
   <p>Email: example@email.com</p>
   <p>Facebook: exampleUsername</p>
   <p>X: @exampleXUsername</p>
-  <script>
-    // This is my function for vaildating that the user in fact has entered text into the field. As the assignment continues, I will add more validation to this function such as ensuring the email address is valid.
-    function valid() {
-      //The following let statements create variables that take in the user's input from the html form below.
-      let x = document.forms["form"]["email"].value;
-      let y = document.forms["form"]["comment"].value;
-      //I then take the variables and use operators to determine if the user has entered text into the fields.
-      if (x == "" && y == "") {
-        //An alert will pop up on the screen if the above operation is true.
-        alert("Both fields must be filled out");
-        return false;
-      } else if (x == "") {
-        alert("Email must be filled out");
-      } else if (y == "") {
-        alert("Comment must be filled out");
-      }
-    }
-  </script> 
   <!-- This is a basic form that takes in input from the user. -->
-  <form name="form" onsubmit="return valid()" action="/submit-form" method="post">
+  <form name="form" onsubmit="valid()" action="/submit-form" method="post">
     <fieldset>
       <legend>Inquiries</legend>
       <label for="email">Email:</label><br>
       <input type="text" id="email" name="email" required><br>
       <label for="comment">Comment:</label><br>
-      <input type="text" id="comment" name="comment">
+      <input type="text" id="comment" name="comment" required>
       <input type="submit" value="Submit">
     </fieldset>
   </form> 
